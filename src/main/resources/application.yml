@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://john.db.elephantsql.com:5432/gdapdvqz
+    username: gdapdvqz
+    password: gYBSNbFTLCxTUW8nxqfOLSxMyDEXxXTd
+
+  devtools:
+    restart:
+      poll-interval: 1s
+
+
+  jpa:
+    show-sql: true
+    #    generate-ddl: true
+    #    properties:
+    #      hibernate:
+    #        hbm2ddl:
+    #          auto: update
+    hibernate:
+      ddl-auto: none
+
+# Mail
+mailServer:
+  host: smtp.gmail.com
+  port: 587
+  email: thaitestmail123@gmail.com
+  password: gpzhcmmfvmrigdtz
+  protocol: smtp
+  isSSL: false
+
+# Swagger3
+config:
+  openapi:
+    dev-url: http://localhost:8080
+    prod-url: https://familytree-api.com
+
+springdoc:
+  swagger-ui:
+    path: /familytree-documentation
+    tryItOutEnabled: true
+    operationsSorter: method
+    tagsSorter: alpha
+    filter: true
+  api-docs:
+    path: /familytree-api-docs
+  packages-to-scan: com.example.familytree.controllers
+
+
+
+
