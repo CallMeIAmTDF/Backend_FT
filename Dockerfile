@@ -1,4 +1,3 @@
 FROM openjdk:17
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
-EXPOSE 8080
+ADD ./docker-spring-boot.jar docker-spring-boot.jar
+ENTRYPOINT ["java", "-jar", "docker-spring-boot.jar"]
